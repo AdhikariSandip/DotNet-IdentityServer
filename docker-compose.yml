@@ -1,0 +1,6 @@
+services:
+  ifmisidentity:
+    image: ${DOCKER_REGISTRY-}ifmisidentity
+    build:
+      context: .
+      dockerfile: ifmisIdentity/Dockerfile
