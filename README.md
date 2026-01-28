@@ -88,7 +88,7 @@ Copy code
 ## 🚀 Quick Start
 
 ### 1️⃣ Prerequisites
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
 - [PostgreSQL 16+](https://www.postgresql.org/download/)
 - (Optional) pgAdmin or DBeaver for DB management
 
@@ -100,19 +100,20 @@ dotnet restore
 3️⃣ Configure Connection
 Edit src/BinetIdentityService.WebApi/appsettings.json:
 
-json
-Copy code
-"ConnectionStrings": {
-  "DefaultConnection": "Host=localhost;Port=5432;Database=binet_identity;Username=postgres;Password=postgres"
-}
-💡 Keep secrets and provider credentials (Google, Facebook, etc.) in environment variables — never commit real keys.
+json   
+Copy code    
+"ConnectionStrings": {     
+  "DefaultConnection": "Host=localhost;Port=5432;Database=binet_identity;Username=postgres;Password=postgres"     
+}      
+💡 Keep secrets and provider credentials (Google, Facebook, etc.) in environment variables — never commit real keys.      
 
-4️⃣ Apply Migrations
-bash
-Copy code
-dotnet tool install --global dotnet-ef
-dotnet ef migrations add InitIdentity -p src/BinetIdentityService.Infrastructure -s src/BinetIdentityService.WebApi
-dotnet ef database update -p src/BinetIdentityService.Infrastructure -s src/BinetIdentityService.WebApi
+4️⃣ Apply Migrations      
+bash    
+Copy code      
+dotnet tool install --global dotnet-ef        
+dotnet ef migrations add InitIdentity -p src/BinetIdentityService.Infrastructure -s src/BinetIdentityService.WebApi      
+dotnet ef database update -p src/BinetIdentityService.Infrastructure -s src/BinetIdentityService.WebApi      
+```
 5️⃣ Run the API
 bash
 Copy code
