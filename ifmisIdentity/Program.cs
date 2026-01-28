@@ -2,6 +2,7 @@
 using ifmisIdentity.Data;
 using Microsoft.OpenApi.Models;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Simple console logging
