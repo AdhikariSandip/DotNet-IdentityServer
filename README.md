@@ -57,31 +57,31 @@ Copy code
 
 ## 🧱 Project Structure
 
-src/
-├─ BinetIdentityService.Domain/
-│ └─ Entities/
-│ ├─ ClaimDefinition.cs
-│ ├─ UserClaimAssignment.cs
-│ ├─ AppUser.cs
-│ └─ AppRole.cs
-│
-├─ BinetIdentityService.Application/
-│ ├─ Abstractions/ # Interfaces: IClaimsService, IClientService, IScopeService
-│ ├─ DTOs/ # DTOs like ClientDescriptor, ClaimDto
-│ └─ Common/ # Shared Result<T> type
-│
-├─ BinetIdentityService.Infrastructure/
-│ ├─ Persistence/ # EF Core DbContext
-│ ├─ Auth/ # Identity, OpenIddict, External Providers, Claims Services
-│ ├─ Seed/ # Seeder for default clients/scopes
-│ └─ DI/ # DependencyInjection.cs
-│
-└─ BinetIdentityService.WebApi/
-├─ Controllers/ # Admin controllers for Claims and Clients
-└─ Program.cs # Composition root
-
-yaml
-Copy code
+src/   
+├─ BinetIdentityService.Domain/   
+│ └─ Entities/   
+│ ├─ ClaimDefinition.cs   
+│ ├─ UserClaimAssignment.cs   
+│ ├─ AppUser.cs   
+│ └─ AppRole.cs  
+│     
+├─ BinetIdentityService.Application/    
+│ ├─ Abstractions/ # Interfaces: IClaimsService, IClientService, IScopeService      
+│ ├─ DTOs/ # DTOs like ClientDescriptor, ClaimDto       
+│ └─ Common/ # Shared Result<T> type      
+│      
+├─ BinetIdentityService.Infrastructure/      
+│ ├─ Persistence/ # EF Core DbContext      
+│ ├─ Auth/ # Identity, OpenIddict, External Providers, Claims Services      
+│ ├─ Seed/ # Seeder for default clients/scopes      
+│ └─ DI/ # DependencyInjection.cs      
+│        
+└─ BinetIdentityService.WebApi/        
+├─ Controllers/ # Admin controllers for Claims and Clients      
+└─ Program.cs # Composition root        
+      
+yaml    
+Copy code    
 
 ---
 
